@@ -106,6 +106,8 @@ function draw() {
     obstaclesGroup.setVelocityXEach(0);
     cloudsGroup.setVelocityXEach(0);
     
+    
+    
     //change the trex animation
     trex.changeAnimation("collided",trex_collided);
     
@@ -113,8 +115,9 @@ function draw() {
     obstaclesGroup.setLifetimeEach(-1);
     cloudsGroup.setLifetimeEach(-1);
     
-    if(mousePressedOver(restart)) {
+    if(mousePressedOver(restart)|| touches.length>0) {
       reset();
+      touches=[];
     }
   }
   
